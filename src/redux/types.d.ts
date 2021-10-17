@@ -1,8 +1,5 @@
 import { ActionTypes } from './ActionTypes';
-
-interface RootState {
-  characters: Character[];
-}
+import rootReducer from './reducers';
 
 interface Character {
   id: string;
@@ -13,5 +10,7 @@ interface Action {
   readonly type: ActionTypes;
   readonly payload?: any;
 }
+
+type RootState = ReturnType<typeof rootReducer>;
 
 export type { RootState, Character, Action };
