@@ -1,0 +1,4 @@
+export enum ActionTypes {
+  GET_CHARACTERS = 'GET_CHARACTERS',
+  SET_CHARACTERS = 'GET_CHARACTERS',
+}
