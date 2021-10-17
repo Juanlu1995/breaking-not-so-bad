@@ -3,15 +3,19 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['airbnb-typescript'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 13,
+    ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.eslint.json',
+    files: ['*.ts', '*.tsx'],
   },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  plugins: ['react', '@typescript-eslint', 'import'],
+  rules: {
+    'no-use-before-define': 'off',
+  },
 };
