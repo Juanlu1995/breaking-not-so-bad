@@ -4,8 +4,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Container } from '@mui/material';
-import Characters from './containers/Characters';
 import Header from './containers/Header';
+import Main from './pages/Main';
 /*
 TODO list
   Add an error boundary
@@ -22,7 +22,7 @@ function App() {
     <>
       <Header />
       <Container maxWidth={'xl'}>
-        <Characters />
+        <Main />
       </Container>
     </>
   );

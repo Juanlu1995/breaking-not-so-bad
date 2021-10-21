@@ -1,10 +1,8 @@
 import { createSelector } from 'reselect';
 import { Character, RootState } from './types';
-import { AppReducer } from './reducers/types';
+import { AppState } from './reducers/types';
 
-const makeSelectAppRootState = (state: RootState): AppReducer => state.App;
+const makeSelectAppState = (state: RootState): AppState => state.App;
 
-export const makeSelectCharacters = createSelector(
-  makeSelectAppRootState,
-  (appRootState): Character[] => appRootState.characters,
-);
+export const makeSelectCharacters = () =>
+  createSelector(makeSelectAppState, (appRootState): Character[] => appRootState.characters);

@@ -1,7 +1,7 @@
 import { Action } from '../types';
-import { AppReducer } from './types';
+import { AppState } from './types';
 
-const initialState: AppReducer = {
+const initialState: AppState = {
   characters: [],
 };
 

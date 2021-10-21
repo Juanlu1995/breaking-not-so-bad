@@ -2,8 +2,16 @@ import { ActionTypes } from './ActionTypes';
 import rootReducer from './reducers';
 
 interface Character {
-  id: string;
-  name: string;
+  readonly id: integer;
+  readonly name: string;
+  readonly birthday: string;
+  readonly occupation: string[];
+  readonly img: string;
+  readonly status: string;
+  readonly nickname: string;
+  readonly appearance: number[];
+  readonly portrayed: string;
+  readonly category: string[];
 }
 
 interface Action {

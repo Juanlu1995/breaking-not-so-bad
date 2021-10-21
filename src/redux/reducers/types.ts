@@ -1,5 +1,5 @@
 import { Character } from '../types';
 
-export interface AppReducer {
+export interface AppState {
   characters: Character[];
 }
