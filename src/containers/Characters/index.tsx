@@ -25,7 +25,6 @@ const CharactersWrapper = styled.div`
 const Characters = (): JSX.Element => {
   const dispatch = useDispatch();
   const { characters } = useSelector(estructureSelector);
-  console.log(characters);
   useEffect(() => {
     dispatch(getCharacters());
   }, []);
