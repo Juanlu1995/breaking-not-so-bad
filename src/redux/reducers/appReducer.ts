@@ -1,12 +1,19 @@
 import { Action } from '../types';
-import { AppReducer } from './types';
+import { AppState } from './types';
+import { ActionTypes } from '../ActionTypes';
 
-const initialState: AppReducer = {
+const initialState: AppState = {
   characters: [],
 };
 
 const appReducer = (state = initialState, action: Action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
+    case ActionTypes.SET_CHARACTERS:
+      return {
+        ...state,
+        characters: payload,
+      };
     default:
       return { ...state };
   }
