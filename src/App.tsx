@@ -14,8 +14,6 @@ TODO list
   Add a theme
   Do the request
   Create interfaces
-  Create routes
-  Study if developer options works
   Study deploy
   Create or modify README.md
 */
@@ -25,8 +23,14 @@ function App() {
       <Header />
       <Container maxWidth={'xl'}>
         <BrowserRouter>
-          {routes.map((r: RouteProps) => (
-            <Route exact={r?.exact} component={r?.component} strict={r?.strict} path={r?.path} />
+          {routes.map((r: RouteProps, index: number) => (
+            <Route
+              exact={r?.exact}
+              component={r?.component}
+              strict={r?.strict}
+              path={r?.path}
+              key={`route_${index}`}
+            />
           ))}
         </BrowserRouter>
       </Container>

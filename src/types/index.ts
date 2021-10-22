@@ -14,3 +14,14 @@ export interface Character {
   readonly portrayed: string;
   readonly category: string[];
 }
+
+export interface Quote {
+  id: number;
+  quote: string;
+  author: string;
+  series?: string;
+}
+
+export interface CharacterInfo extends Character {
+  readonly quotes?: Quote[];
+}
