@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
-import { Character, RootState } from './types';
+import { RootState } from './types';
 import { AppState } from './reducers/types';
+import { Character } from '../types';
 
 const makeSelectAppState = (state: RootState): AppState => state.App;
 

@@ -5,7 +5,9 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Container } from '@mui/material';
 import Header from './containers/Header';
-import Main from './pages/Main';
+import { BrowserRouter, Route, RouteProps } from 'react-router-dom';
+import { routes } from './routes';
+
 /*
 TODO list
   Add an error boundary
@@ -22,7 +24,11 @@ function App() {
     <>
       <Header />
       <Container maxWidth={'xl'}>
-        <Main />
+        <BrowserRouter>
+          {routes.map((r: RouteProps) => (
+            <Route exact={r?.exact} component={r?.component} strict={r?.strict} path={r?.path} />
+          ))}
+        </BrowserRouter>
       </Container>
     </>
   );
