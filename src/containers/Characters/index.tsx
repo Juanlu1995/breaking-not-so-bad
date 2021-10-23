@@ -7,6 +7,7 @@ import { makeSelectCharacters } from '../../redux/selectors';
 import { Character } from '../../types';
 import CharacterCard from '../../components/CharacterCard';
 import styled from 'styled-components';
+import { Loading } from '../../components/Loading';
 
 interface SelectorProps {
   characters: Character[];
@@ -31,9 +32,11 @@ const Characters = (): JSX.Element => {
 
   return (
     <CharactersWrapper>
-      {characters.map((character: Character) => (
-        <CharacterCard character={character} />
-      ))}
+      {characters.length > 0 ? (
+        characters.map((character: Character) => <CharacterCard character={character} />)
+      ) : (
+        <Loading />
+      )}
     </CharactersWrapper>
   );
 };

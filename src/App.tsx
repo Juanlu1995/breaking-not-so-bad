@@ -13,8 +13,6 @@ import { ThemeProvider } from 'styled-components';
 TODO list
   Add an error boundary
   Add a theme
-  Do the request
-  Create interfaces
   Study deploy
   Create or modify README.md
 */
