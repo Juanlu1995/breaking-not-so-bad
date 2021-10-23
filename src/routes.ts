@@ -1,7 +1,7 @@
 import { RouteProps } from 'react-router-dom';
 // import App from './App';
 import Main from './pages/Main';
-import CharacterDetail from './pages/CharacterDetail';
+import CharacterDetailPage from './pages/CharacterDetailPage';
 
 export const routes: RouteProps[] = [
   {
@@ -11,7 +11,7 @@ export const routes: RouteProps[] = [
   },
   {
     path: '/character/:id',
-    component: CharacterDetail,
+    component: CharacterDetailPage,
     exact: true,
     strict: true,
   },

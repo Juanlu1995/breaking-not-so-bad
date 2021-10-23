@@ -1,5 +1,5 @@
-import { buildFetch } from '../../helpers/requester';
-import { Character, Quote } from '../../types';
+import { buildFetch } from './requester';
+import { Character, CharacterInfo, Quote } from '../types';
 
 export const getCharactersRequest = (): Promise<Character[]> => {
   return (
@@ -82,4 +82,12 @@ export const getCharacterQuotes = (characterName: string): Promise<Quote[]> => {
         }))
         : ([] as Quote[]);
     });
+};
+export const getCharacterInfo = async (id: number): Promise<CharacterInfo> => {
+  let quotes: Quote[] = [] as Quote[];
+  const character: Character = await getCharacterRequest(id);
+  if (character) {
+    quotes = await getCharacterQuotes(character.name);
+  }
+  return { ...character, quotes: quotes };
 };
