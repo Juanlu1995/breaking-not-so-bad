@@ -61,6 +61,15 @@ Get the characters of the show Breaking Bad to show them in the main page and al
 by 1 to see all the information that we can get from the API of
 [Breaking Bad API](https://breakingbadapi.com/).
 
+### Make it run in local
+
+First, you must install the dependencies with `yarn install`.
+
+Second, you must write a `.env` file following the `.env.example` that it's included. It's important
+write the same variables that it is in this file.
+
+After finish those process you can run it with [`yarn start`](#yarn start).
+
 ## Learn More
 
 You can learn more in the
