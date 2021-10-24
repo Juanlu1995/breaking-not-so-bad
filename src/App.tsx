@@ -13,8 +13,8 @@ import { ThemeProvider } from 'styled-components';
 TODO list
   Add an error boundary
   Add a theme
-  Study deploy
-  Create or modify README.md
+  Do tests (think if cypress or jest)
+  Do i18next
 */
 function App() {
   const theme = createTheme();
